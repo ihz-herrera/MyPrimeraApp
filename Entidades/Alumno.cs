@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace MyPrimeraApp.Entidades
 {
-    internal class Alumno
+    public class Alumno
     {
-        internal string Nombre { get; set; }
-        internal string Apellido { get; set; }
-        internal int Edad { get; set; } = 12; //Regla de negocio
+        public int id;
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int Edad { get; set; } = 12; //Regla de negocio
 
 
         public Alumno(string nombre, string apellido)
