@@ -1,3 +1,3 @@
 # MyPrimeraApp
 
-Aplicación de ejercios de practica
+Aplicación de ejercios de práctica
