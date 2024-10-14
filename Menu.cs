@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyPrimeraApp.Repositorio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,11 @@ namespace MyPrimeraApp
 
         private void btnAlumnos_Click(object sender, EventArgs e)
         {
-            var form = new frmAlumnos();
+
+            var repo = new AlumnoTxtRepository();
+
+
+            var form = new frmAlumnos(repo);
             form.Show();
         }
     }
