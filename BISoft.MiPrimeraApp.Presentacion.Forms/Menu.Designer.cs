@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             btnAlumnos = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // btnAlumnos
@@ -41,11 +42,22 @@
             btnAlumnos.UseVisualStyleBackColor = true;
             btnAlumnos.Click += btnAlumnos_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(80, 161);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 1;
+            button1.Text = "Alumnos";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(btnAlumnos);
             Name = "Menu";
             Text = "Menu";
@@ -55,5 +67,6 @@
         #endregion
 
         private Button btnAlumnos;
+        private Button button1;
     }
 }
