@@ -1,19 +1,23 @@
 using BISoft.MiPrimeraApp.Aplicacion.Servicios;
 using MyPrimeraApp.Contextos;
 using MyPrimeraApp.Entidades;
+using MyPrimeraApp.Helpers;
 using MyPrimeraApp.Repositorio;
+using static MyPrimeraApp.Fabrica.RepositoryFactory;
 
 namespace MyPrimeraApp
 {
     public partial class frmAlumnos : Form
     {
         private AlumnoService _service;
+        private AppContexto _appContext;
 
         public frmAlumnos(AlumnoService service)
         {
             InitializeComponent();
 
             _service = service;
+
         }
 
         private void btnGuardar_Click(object senderr, EventArgs e)

@@ -21,13 +21,13 @@ namespace BISoft.MiPrimeraApp.Aplicacion.Fabrica
             return new AlumnoService(repo);
         }
 
-        public static MaestroService CrearMaestroService(DBType type = DBType.Txt)
-        {
+        //public static MaestroService CrearMaestroService(DBType type = DBType.Txt)
+        //{
 
-            var repo = RepositoryFactory.CrearMaestroRepository(type);
+        //    var repo = RepositoryFactory.CrearMaestroRepository(type);
 
-            return new MaestroService(repo);
-        }
+        //    return new MaestroService(repo);
+        //}
 
     }
 }
