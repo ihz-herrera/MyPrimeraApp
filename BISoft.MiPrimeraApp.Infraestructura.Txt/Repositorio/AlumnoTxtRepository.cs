@@ -7,11 +7,11 @@ namespace MyPrimeraApp.Repositorio
 
         public void Guardar(Alumno alumno)
         {
-            //Validar que el alumno no existe
-            if (Obtener().Any(x => x.Nombre == alumno.Nombre && x.Apellido == alumno.Apellido))
-            {
-                throw new InvalidOperationException(  "El alumno ya existe");
-            }
+            ////Validar que el alumno no existe
+            //if (Obtener().Any(x => x.Email == alumno.Email))
+            //{
+            //    throw new InvalidOperationException(  "El alumno ya existe");
+            //}
 
             using (StreamWriter sw = new StreamWriter("C:\\BaseDeDatos\\Alumnos.txt", true))
             {

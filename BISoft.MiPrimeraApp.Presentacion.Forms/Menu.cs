@@ -13,6 +13,8 @@ using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using MyPrimeraApp.Fabrica;
 using static MyPrimeraApp.Fabrica.AlumnoRepositoryFactory;
+using BISoft.MiPrimeraApp.Aplicacion.Servicios;
+using BISoft.MiPrimeraApp.Aplicacion.Fabrica;
 
 namespace MyPrimeraApp
 {
@@ -25,11 +27,13 @@ namespace MyPrimeraApp
 
         private void btnAlumnos_Click(object sender, EventArgs e)
         {
-            var repoSql = AlumnoRepositoryFactory
-                .CrearAlumnoRepository(DBType.Sqlite);
-                //new AlumnoRepository(context);
+            //var repoSql = AlumnoRepositoryFactory
+            //    .CrearAlumnoRepository(DBType.Sqlite);
+            //    //new AlumnoRepository(context);
 
-            var form = new frmAlumnos(repoSql);
+            var servicio = ServiceFactory.CrearAlumnoService(DBType.Sqlite);
+
+            var form = new frmAlumnos(servicio);
             form.Show();
         }
 

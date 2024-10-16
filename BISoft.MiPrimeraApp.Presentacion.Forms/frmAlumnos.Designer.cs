@@ -36,6 +36,8 @@
             label1 = new Label();
             cmbEdad = new ComboBox();
             btnCargar = new Button();
+            txtCorreo = new TextBox();
+            lblCorreo = new Label();
             SuspendLayout();
             // 
             // lblNombre
@@ -56,7 +58,7 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(21, 209);
+            btnGuardar.Location = new Point(21, 266);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(94, 29);
             btnGuardar.TabIndex = 3;
@@ -83,7 +85,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(29, 134);
+            label1.Location = new Point(29, 191);
             label1.Name = "label1";
             label1.Size = new Size(43, 20);
             label1.TabIndex = 4;
@@ -93,14 +95,14 @@
             // 
             cmbEdad.FormattingEnabled = true;
             cmbEdad.Items.AddRange(new object[] { "12", "13", "14", "15", "16", "17", "18" });
-            cmbEdad.Location = new Point(27, 163);
+            cmbEdad.Location = new Point(27, 220);
             cmbEdad.Name = "cmbEdad";
             cmbEdad.Size = new Size(194, 28);
             cmbEdad.TabIndex = 2;
             // 
             // btnCargar
             // 
-            btnCargar.Location = new Point(124, 209);
+            btnCargar.Location = new Point(124, 266);
             btnCargar.Name = "btnCargar";
             btnCargar.Size = new Size(94, 29);
             btnCargar.TabIndex = 5;
@@ -108,11 +110,29 @@
             btnCargar.UseVisualStyleBackColor = true;
             btnCargar.Click += btnCargar_Click;
             // 
+            // txtCorreo
+            // 
+            txtCorreo.Location = new Point(27, 161);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(194, 27);
+            txtCorreo.TabIndex = 6;
+            // 
+            // lblCorreo
+            // 
+            lblCorreo.AutoSize = true;
+            lblCorreo.Location = new Point(29, 138);
+            lblCorreo.Name = "lblCorreo";
+            lblCorreo.Size = new Size(54, 20);
+            lblCorreo.TabIndex = 7;
+            lblCorreo.Text = "Correo";
+            // 
             // frmAlumnos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblCorreo);
+            Controls.Add(txtCorreo);
             Controls.Add(btnCargar);
             Controls.Add(cmbEdad);
             Controls.Add(label1);
@@ -137,5 +157,7 @@
         private Label label1;
         private ComboBox cmbEdad;
         private Button btnCargar;
+        private TextBox txtCorreo;
+        private Label lblCorreo;
     }
 }

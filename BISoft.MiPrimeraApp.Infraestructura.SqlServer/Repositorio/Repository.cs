@@ -23,13 +23,13 @@ namespace MyPrimeraApp.Repositorio
         public void Guardar(QuienSabe entidad)
         {
             entidad.id = 0;
-            var result = _contexto.Set<QuienSabe>()
-                .Where(x => x.Nombre == entidad.Nombre && x.Apellido == entidad.Apellido)
-                .FirstOrDefault();
-            if (result != null)
-            {
-                return;
-            }
+            //var result = _contexto.Set<QuienSabe>()
+            //    .Where(x => x.Email )
+            //    .FirstOrDefault();
+            //if (result != null)
+            //{
+            //    return;
+            //}
             _contexto.Set<QuienSabe>().Add(entidad);
             _contexto.SaveChanges();
         }

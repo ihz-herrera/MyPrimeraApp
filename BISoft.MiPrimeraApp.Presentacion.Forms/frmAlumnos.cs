@@ -1,3 +1,4 @@
+using BISoft.MiPrimeraApp.Aplicacion.Servicios;
 using MyPrimeraApp.Contextos;
 using MyPrimeraApp.Entidades;
 using MyPrimeraApp.Repositorio;
@@ -6,28 +7,29 @@ namespace MyPrimeraApp
 {
     public partial class frmAlumnos : Form
     {
-        private IAlumnoRepository _alumnoRepository;
+        private AlumnoService _service;
 
-        public frmAlumnos(IAlumnoRepository repo)
+        public frmAlumnos(AlumnoService service)
         {
             InitializeComponent();
-            _alumnoRepository = repo;
 
+            _service = service;
         }
 
         private void btnGuardar_Click(object senderr, EventArgs e)
         {
+            try
+            {
+                var alumno =  _service.CrearAlumno(txtNombre.Text, txtApellido.Text, txtCorreo.Text);
 
-            var alumno = new Alumno(txtNombre.Text, txtApellido.Text);
-
-            var edad = 0;
-            int.TryParse(cmbEdad.Text, out edad);
-
-            alumno.Edad = edad;
-            _alumnoRepository.Guardar(alumno);
-
-            MessageBox.Show("El nombre es: " + alumno.Nombre + " " + alumno.Apellido
-                + " \nEdad:" + alumno.Edad, "Mensaje Alumnos");
+                MessageBox.Show("El nombre es: " + alumno.Nombre + " " + alumno.Apellido
+                    + " \nEdad:" + alumno.Edad, "Mensaje Alumnos");
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+            
+            
         }
 
 
