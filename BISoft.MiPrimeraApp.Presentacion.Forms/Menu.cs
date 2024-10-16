@@ -15,14 +15,21 @@ using MyPrimeraApp.Fabrica;
 using static MyPrimeraApp.Fabrica.RepositoryFactory;
 using BISoft.MiPrimeraApp.Aplicacion.Servicios;
 using BISoft.MiPrimeraApp.Aplicacion.Fabrica;
+using MyPrimeraApp.Helpers;
 
 namespace MyPrimeraApp
 {
     public partial class Menu : Form
     {
+
+        private readonly AppContexto _appContext;
+
         public Menu()
         {
             InitializeComponent();
+
+            _appContext = AppContexto.Instance(DBType.Sqlite);
+
         }
 
         private void btnAlumnos_Click(object sender, EventArgs e)
@@ -31,7 +38,10 @@ namespace MyPrimeraApp
             //    .CrearAlumnoRepository(DBType.Sqlite);
             //    //new AlumnoRepository(context);
 
-            var servicio = ServiceFactory.CrearAlumnoService(DBType.Sqlite);
+            //_appContext = AppContexto.Instance(DBType.Txt);
+
+
+            var servicio = ServiceFactory.CrearAlumnoService(_appContext.DBType);
 
             var form = new frmAlumnos(servicio);
             form.Show();
@@ -40,7 +50,7 @@ namespace MyPrimeraApp
         private void button1_Click(object sender, EventArgs e)
         {
             var repoSql = RepositoryFactory
-                .CrearAlumnoRepository(DBType.Txt);
+                .CrearAlumnoRepository(_appContext.DBType);
             //new AlumnoRepository(context);
         }
     }
