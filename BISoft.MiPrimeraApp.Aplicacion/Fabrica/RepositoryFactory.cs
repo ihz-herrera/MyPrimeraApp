@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyPrimeraApp.Fabrica
 {
-    public class AlumnoRepositoryFactory
+    public class RepositoryFactory
     {
 
         public static IAlumnoRepository CrearAlumnoRepository(DBType type = DBType.Txt )

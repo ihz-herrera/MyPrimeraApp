@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using MyPrimeraApp.Fabrica;
-using static MyPrimeraApp.Fabrica.AlumnoRepositoryFactory;
+using static MyPrimeraApp.Fabrica.RepositoryFactory;
 using BISoft.MiPrimeraApp.Aplicacion.Servicios;
 using BISoft.MiPrimeraApp.Aplicacion.Fabrica;
 
@@ -39,7 +39,7 @@ namespace MyPrimeraApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var repoSql = AlumnoRepositoryFactory
+            var repoSql = RepositoryFactory
                 .CrearAlumnoRepository(DBType.Txt);
             //new AlumnoRepository(context);
         }
