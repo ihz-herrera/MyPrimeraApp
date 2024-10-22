@@ -1,0 +1,6 @@
+@BISoft.MiPrimeraApp.Api_HostAddress = http://localhost:5044
+
+GET {{BISoft.MiPrimeraApp.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

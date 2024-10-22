@@ -32,5 +32,10 @@ namespace BISoft.MiPrimeraApp.Aplicacion.Servicios
 
             return alumno;
         }
+
+        public List<Alumno> ObtenerAlumnos()
+        {
+            return _repo.Obtener();
+        }
     }
 }
