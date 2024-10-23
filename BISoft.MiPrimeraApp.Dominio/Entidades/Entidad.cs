@@ -8,7 +8,7 @@ namespace MyPrimeraApp.Entidades
 {
     public class Entidad
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
 

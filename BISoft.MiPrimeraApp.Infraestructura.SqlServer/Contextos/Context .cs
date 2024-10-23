@@ -26,7 +26,7 @@ namespace MyPrimeraApp.Contextos
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Alumno>().HasKey(x => x.id);
+            modelBuilder.Entity<Alumno>().HasKey(x => x.Id);
         }
     }
 }

@@ -9,7 +9,9 @@
   <ItemGroup>
 
 	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
-	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8"/>
+
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8" />
     <ProjectReference Include="..\BISoft.MiPrimeraApp.Dominio\BISoft.MiPrimeraApp.Dominio.csproj" />
   </ItemGroup>
 

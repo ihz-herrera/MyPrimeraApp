@@ -13,7 +13,7 @@ namespace BISoft.MiPrimeraApp.Infraestructura.Txt.Repositorio
         {
 
             var filename =entidad.GetType().Name;
-            using (StreamWriter sw = new StreamWriter($"C:\\BaseDeDatos\\{entidad.GetType}.bst", true))
+            using (StreamWriter sw = new StreamWriter($"C:\\BaseDeDatos\\{entidad.GetType().Name}.bst", true))
             {
                 sw.WriteLine(entidad.TxtSerializer());
             }

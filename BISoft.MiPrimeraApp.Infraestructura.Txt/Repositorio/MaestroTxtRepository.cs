@@ -21,7 +21,7 @@ namespace MyPrimeraApp.Repositorio
 
         public Maestro Obtener(int id)
         {
-            return Obtener().FirstOrDefault(x => x.id == id);
+            return Obtener().FirstOrDefault(x => x.Id == id);
         }
 
         public List<Maestro> Obtener()

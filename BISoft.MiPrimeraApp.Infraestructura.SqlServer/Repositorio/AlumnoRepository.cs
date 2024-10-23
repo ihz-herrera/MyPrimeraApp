@@ -8,6 +8,8 @@ namespace MyPrimeraApp.Repositorio
 
         public AlumnoRepository(Context contexto) : base(contexto)
         {
+
+
         }
 
     }
